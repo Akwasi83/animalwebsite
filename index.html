@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal World</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f8f2;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2e7d32, #66bb6a);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: #1b5e20;
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 40px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      color: #2e7d32;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    .habitats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .habitat-box {
+      background: #ffffff;
+      border-left: 6px solid #4caf50;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .facts-box {
+      background: #e8f5e9;
+      padding: 30px;
+      border-radius: 16px;
+      margin-top: 40px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .facts-box h3 {
+      margin-bottom: 15px;
+      color: #1b5e20;
+    }
+
+    .fact-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 24px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .fact-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Animal World</h1>
+    <p>Discover amazing animals, where they live, and fun facts that make the animal kingdom exciting for kids, students, and nature lovers.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#animals">Animals</a></li>
+      <li><a href="#habitats">Habitats</a></li>
+      <li><a href="#facts">Fun Facts</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Welcome to the Animal Kingdom</h2>
+      <p class="intro">
+        Animals live in different environments around the world. Some run across the savanna, some swim deep in the ocean, and some fly high in the sky. This website gives a simple introduction to a few amazing animals.
+      </p>
+    </section>
+
+    <section id="animals">
+      <h2 class="section-title">Featured Animals</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80" alt="Lion" />
+          <div class="card-content">
+            <h3>Lion</h3>
+            <p>Lions are powerful big cats known as the kings of the jungle. They live mostly in grasslands and savannas and often hunt in groups called prides.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=900&q=80" alt="Elephant" />
+          <div class="card-content">
+            <h3>Elephant</h3>
+            <p>Elephants are the largest land animals on Earth. They are intelligent, social, and use their trunks for eating, drinking, and communication.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1501706362039-c6e80948bb0c?auto=format&fit=crop&w=900&q=80" alt="Dolphin" />
+          <div class="card-content">
+            <h3>Dolphin</h3>
+            <p>Dolphins are friendly marine mammals that live in oceans and some rivers. They are known for being playful, smart, and fast swimmers.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500829243541-74b677fecc30?auto=format&fit=crop&w=900&q=80" alt="Eagle" />
+          <div class="card-content">
+            <h3>Eagle</h3>
+            <p>Eagles are birds of prey with sharp eyesight and strong talons. They soar high and hunt small animals with great precision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habitats" style="margin-top: 50px;">
+      <h2 class="section-title">Animal Habitats</h2>
+      <div class="habitats">
+        <div class="habitat-box">
+          <h3>Forest</h3>
+          <p>Forests are home to animals like deer, monkeys, birds, and bears. Trees provide food, shade, and shelter.</p>
+        </div>
+        <div class="habitat-box">
+          <h3>Ocean</h3>
+          <p>Oceans are full of life including dolphins, whales, sharks, turtles, and colorful fish.</p>
+        </div>
+        <div class="habitat-box">
+          <h3>Desert</h3>
+          <p>Deserts are hot and dry. Animals like camels, snakes, and lizards are adapted to survive there.</p>
+        </div>
+        <div class="habitat-box">
+          <h3>Grassland</h3>
+          <p>Grasslands support animals such as lions, zebras, giraffes, and elephants.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts">
+      <div class="facts-box">
+        <h3>Animal Fun Fact Generator</h3>
+        <p class="fact-text" id="factText">Click the button to learn a fun fact about animals.</p>
+        <button onclick="showFact()">Show Fun Fact</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Animal World | Created for learning and fun</p>
+  </footer>
+
+  <script>
+    const facts = [
+      "A group of lions is called a pride.",
+      "Elephants can recognize themselves in a mirror.",
+      "Dolphins use sounds and clicks to communicate.",
+      "An eagle can spot prey from very far away.",
+      "A giraffe’s tongue can be about 20 inches long.",
+      "Octopuses have three hearts."
+    ];
+
+    function showFact() {
+      const factText = document.getElementById('factText');
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factText.textContent = facts[randomIndex];
+    }
+  </script>
+</body>
+</html>
